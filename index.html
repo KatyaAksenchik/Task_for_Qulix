@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+    <title>Task</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="script.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .people {
+            display: flex;
+            padding: 15px;
+        }
+
+        .people div {
+            width: 33%;
+            text-align: center;
+        }
+
+        .people span {
+            padding: 10px 0;
+        }
+
+        strong {
+            display: block;
+            padding: 10px;
+        }
+
+        .worker {
+            text-align: center;
+        }
+
+        button {
+            padding: 5px;
+            background: #5f9db1;
+            border: solid 1px black;
+            margin-bottom: 5px;
+            color: white;
+        }
+
+        button:hover {
+            background: #57acc7;
+        }
+
+    </style>
+
+</head>
+<body>
+<div class="people">
+    <div>
+        <strong>Обычный человек</strong>
+        <button data-action="1" data-type="person">Сдать сырье</button>
+        <button data-action="2" data-type="person">Собрать сырье</button>
+        <button data-action="3" data-type="person">Собрать подозрительное сырье</button>
+        <p>У меня есть сейчас: <span class="person-storage"></span></p>
+    </div>
+    <div>
+        <strong>Инопланетянин</strong>
+    <span data-type="alien">
+      <button data-action="1" data-type="alien">Сдать сырье</button>
+      <button data-action="2" data-type="alien">Собрать сырье</button>
+      <p>У меня есть сейчас: <span class="alien-storage"></span></p>
+    </span>
+    </div>
+    <div>
+        <strong>Ассоциальный человек</strong>
+        <button data-action="1" data-type="badPerson">Сдать сырье</button>
+        <button data-action="2" data-type="badPerson">Собрать сырье</button>
+        <button data-action="3" data-type="badPerson">Украсть у инопланетянина</button>
+        <button data-action="4" data-type="badPerson">Сменить свое нынешнее состояние</button>
+        <p>У меня есть сейчас: <span class="badPerson-storage"></span></p>
+    </div>
+</div>
+<div class="worker">
+    <strong>Ответ работника пункта приема вторсырья</strong>
+    <p id="answer"></p>
+</div>
+
+</body>
+</html>
